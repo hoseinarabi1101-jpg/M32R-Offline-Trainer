@@ -24,11 +24,11 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Extract Project
-        run: unzip -q M32R_Pro_Offline_v05_Android.zip -d unpacked
+            - name: Extract Project
+        run: unzip -q M32R_Pro_v06_Delay_2000_4Band_Android.zip -d unpacked
 
       - name: Install Android SDK
-      - run: unzip -q M32R_Pro_Offline_v05_Android.zip -d unpacked
+        run: sdkmanager --install 'platforms;android-35' 'build-tools;35.0.0'
       - name: Build APK
         run: gradle --no-daemon -p unpacked/M32R-Offline-Trainer-Android assembleDebug
 
