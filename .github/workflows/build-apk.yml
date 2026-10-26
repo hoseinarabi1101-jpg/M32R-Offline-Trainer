@@ -25,7 +25,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Extract Project
-        run: unzip -q M32R_Offline_Trainer_FRESH.zip -d unpacked
+        run: unzip -q M32R_Pro_Offline_v05_Android.zip -d unpacked
 
       - name: Install Android SDK
         run: sdkmanager --install 'platforms;android-35' 'build-tools;35.0.0'
